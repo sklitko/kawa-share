@@ -16,8 +16,8 @@ export default class KawaapiService {
     return this._transformProduct(product.item)
   }
 
-  getProductImage = ({ url }) => {
-    return `${this._contentBase}/${url}`
+  getProductImage = url => {
+    return `${this._contentBase}${url}`
   }
 
   _transformProduct = product => {
@@ -27,7 +27,11 @@ export default class KawaapiService {
       code: product.code,
       price: product.price,
       caption: product.caption,
-      file: product.file
+      file: product.file,
+      roast: product.roast_human,
+      sort: product.sort_human,
+      arabic_percent: product.arabic_percent,
+      imgUrl: product.file
     }
   }
 }

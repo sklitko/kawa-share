@@ -8,7 +8,7 @@ import { KawaapiServiceProvider } from '../kawaapi-service-context'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import './app.css'
+import './app.scss'
 
 export default class App extends Component {
   state = {
