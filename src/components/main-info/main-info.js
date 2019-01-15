@@ -45,8 +45,8 @@ export default class MainInfo extends Component {
     }
 
     return (
-      <div>
-        <div className="spacer" />
+      <React.Fragment>
+        {/* <div className="spacer" /> */}
         <div className="wrapper">
           <img src={image} alt={item.name} className="img-fluid mx-auto image-product" />
           <h1>{item.name}</h1>
@@ -55,9 +55,18 @@ export default class MainInfo extends Component {
           </div>
           <div className="roast">Обжарка {item.roast}</div>
           <div className="code">Код товара: {item.code}</div>
-          <Rate defaultValue={3} style={{ fontSize: 20 }} allowClear={false} />
+          <div className="price">
+            <span /> {item.price} грн
+          </div>
+          <Rate
+            defaultValue={3}
+            style={{ fontSize: 20 }}
+            allowClear={false}
+            allowHalf
+            character={<i className="material-icons">star</i>}
+          />
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }

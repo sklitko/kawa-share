@@ -38,7 +38,11 @@ export default class SecondInfo extends Component {
 
     return (
       <div className="wrapper">
-        <div className="caption" dangerouslySetInnerHTML={{ __html: item.caption }} />
+        <h4>Описание</h4>
+        <div className="caption" dangerouslySetInnerHTML={{ __html: item.text }} />
+        <div>Вес: {item.weight} г</div>
+        <div>Упаковка: {item.package}</div>
+        <div>Страна производитель: {item.country}</div>
       </div>
     )
   }

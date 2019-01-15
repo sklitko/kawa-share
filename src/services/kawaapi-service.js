@@ -27,11 +27,15 @@ export default class KawaapiService {
       code: product.code,
       price: product.price,
       caption: product.caption,
+      text: product.text,
       file: product.file,
       roast: product.roast_human,
       sort: product.sort_human,
       arabic_percent: product.arabic_percent,
-      imgUrl: product.file
+      imgUrl: product.file,
+      weight: product.weight,
+      country: product.country,
+      package: product.package
     }
   }
 }
